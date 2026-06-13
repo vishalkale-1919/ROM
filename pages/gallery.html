@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Wedding Gallery</title>
+
+    <link rel="stylesheet" href="../css/variables.css" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <style>
+      .gallery-grid {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        gap: 20px;
+
+        padding: 50px;
+      }
+
+      .gallery-grid img {
+        height: 300px;
+
+        object-fit: cover;
+
+        border-radius: 20px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+        transition: 0.4s;
+      }
+
+      .gallery-grid img:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <h1 style="text-align: center">Wedding Gallery</h1>
+
+      <div class="gallery-grid">
+        <img src="../assets/images/gallery1.png" />
+
+        <img src="../assets/images/gallery2.png" />
+
+        <img src="../assets/images/gallery3.png" />
+
+        <img src="../assets/images/gallery4.png" />
+
+        <img src="../assets/images/gallery1.png" />
+
+        <img src="../assets/images/gallery2.png" />
+      </div>
+    </section>
+  </body>
+</html>

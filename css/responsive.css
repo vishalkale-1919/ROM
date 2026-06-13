@@ -1,0 +1,110 @@
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3.4rem;
+  }
+
+  .couple-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 5%;
+  }
+
+  .navbar.scrolled {
+    padding: 15px 5%;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .hero-title .ampersand {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .hero-date {
+    font-size: 1.2rem;
+    padding: 6px 15px;
+  }
+
+  section {
+    padding: 80px 5%;
+  }
+
+  .person {
+    width: 100%;
+  }
+
+  .time-box {
+    width: 120px;
+  }
+
+  .thankyou h1 {
+    font-size: 2.4rem;
+  }
+
+  .gold-divider .line {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.0rem;
+  }
+
+  .hero-title .ampersand {
+    font-size: 1.6rem;
+  }
+
+  .hero-monogram {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .countdown-container {
+    gap: 10px;
+  }
+
+  .time-box {
+    width: 90px;
+    padding: 15px;
+  }
+
+  .time-box span {
+    font-size: 2rem;
+  }
+
+  .swiper-slide img {
+    height: 300px;
+  }
+
+  .flower {
+    display: none;
+  }
+
+  .thankyou h1 {
+    font-size: 1.8rem;
+  }
+
+  .footer-names {
+    font-size: 1.6rem;
+  }
+}

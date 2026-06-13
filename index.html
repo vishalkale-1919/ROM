@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Omprakash & Rohini Wedding</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/opening-screen.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body class="lock-scroll">
+    <!-- Scroll Progress -->
+    <div id="progress-bar"></div>
+
+    <!-- Opening Cinematic Screen -->
+    <section id="opening-screen" class="opening-screen">
+      <div class="doors-container">
+        <div class="door left-door">
+          <div class="door-panel">
+            <div class="door-inner-border"></div>
+          </div>
+        </div>
+        <div class="door right-door">
+          <div class="door-panel">
+            <div class="door-inner-border"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="opening-content">
+        <div class="monogram-logo">O ✦ R</div>
+        <h1 class="opening-title">
+          Omprakash<br>
+          <span class="ampersand">&</span><br>
+          Rohini
+        </h1>
+        <p class="opening-subtitle">Together with their families</p>
+        <button id="open-invitation-btn" class="btn-open-invitation">
+          <span>Open Invitation</span>
+          <div class="btn-glow"></div>
+        </button>
+      </div>
+
+      <div class="particle-overlay"></div>
+    </section>
+
+    <!-- Floating Flowers (styled as gold/rose-gold petals in style.css) -->
+    <div class="flower flower1">🌸</div>
+    <div class="flower flower2">🌺</div>
+    <div class="flower flower3">🌼</div>
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+      <div class="logo">O ✦ R</div>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#couple">Couple</a></li>
+          <li><a href="#story">Story</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#blessings">Blessings</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+
+    <section id="home" class="hero">
+      <div class="overlay">
+        <div class="hero-monogram" data-aos="fade-down" data-aos-duration="1500">O ✦ R</div>
+        
+        <p class="hero-pretitle" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">Together with their families</p>
+        
+        <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+          Dr. Omprakash<br>
+          <span class="ampersand">&</span><br>
+          Dr. Rohini
+        </h1>
+
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+          request the honour of your presence<br>at their wedding ceremony
+        </p>
+
+        <p class="hero-date" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">3 July 2026</p>
+
+        <a href="#countdown" class="btn hero-btn" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="1000"> Open Invitation </a>
+      </div>
+    </section>
+
+    <!-- Invitation -->
+
+    <section class="invitation" data-aos="fade-up">
+      <h2>You Are Invited</h2>
+
+      <p>
+        With immense joy and gratitude, we invite you to celebrate the wedding
+        of Omprakash and Rohini.
+      </p>
+    </section>
+
+    <!-- Countdown -->
+
+    <section id="countdown" class="countdown-section">
+      <h2 data-aos="fade-up">Wedding Countdown</h2>
+
+      <div class="countdown-container">
+        <div class="time-box">
+          <span id="days">00</span>
+          <small>Days</small>
+        </div>
+
+        <div class="time-box">
+          <span id="hours">00</span>
+          <small>Hours</small>
+        </div>
+
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <small>Minutes</small>
+        </div>
+
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <small>Seconds</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Couple -->
+
+    <section id="couple" class="couple">
+      <h2 data-aos="fade-up">The Couple</h2>
+
+      <div class="couple-container">
+        <div class="person bride-card">
+          <img src="assets/images/bride.jpeg" />
+
+          <h3>Dr. Rohini</h3>
+
+          <p>
+            <strong>MBBS, M.S. FIOL (Ophthalmology)</strong><br />Granddaughter
+            of Late Tulsiram G. Nirgude<br />Daughter of Smt. Jayashree & Dr.
+            Nivruti Nirgude
+          </p>
+        </div>
+
+        <div class="person groom-card">
+          <img src="assets/images/groom.jpeg" />
+
+          <h3>Dr. Omprakash</h3>
+
+          <p>
+            <strong>MBBS, D.N.B. (Medicine), DNB (Neurology)</strong><br />Son
+            of Smt. & Shri Balaram Laxminarayan Adgaonkar
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+
+    <section id="story" class="story">
+      <h2 data-aos="fade-up">Our Story</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>2019</h3>
+          <p>First Meeting</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>2021</h3>
+          <p>Friendship Turned Love</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>2024</h3>
+          <p>Engagement</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>2026</h3>
+          <p>Wedding Bells</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events -->
+
+    <section id="events" class="events">
+      <h2 data-aos="fade-up">Wedding Events</h2>
+
+      <div class="events-grid">
+        <div class="event-card">
+          <i class="fa-solid fa-ring"></i>
+          <h3>Sakharpura (Engagement)</h3>
+          <p>Thursday, 2 July 2026</p>
+          <p>4:15 PM</p>
+          <p><small>Vaishnav Hotel, Latur</small></p>
+        </div>
+
+        <div class="event-card">
+          <i class="fa-solid fa-hand-sparkles"></i>
+          <h3>Haldi Ceremony</h3>
+          <p>Thursday, 2 July 2026</p>
+          <p>7:30 PM</p>
+          <p><small>Vaishnav Hotel, Latur</small></p>
+        </div>
+
+        <div class="event-card">
+          <i class="fa-solid fa-heart"></i>
+          <h3>Shubh Vivah (Wedding)</h3>
+          <p>Friday, 3 July 2026</p>
+          <p>12:31 PM (Muhurt)</p>
+          <p><small>Vaishnav Hotel, Latur</small></p>
+        </div>
+
+        <div class="event-card">
+          <i class="fa-solid fa-utensils"></i>
+          <h3>Pritibhoj (Feast)</h3>
+          <p>Friday, 3 July 2026</p>
+          <p>12:35 PM Onwards</p>
+          <p><small>Vaishnav Hotel, Latur</small></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parallax -->
+
+    <section class="parallax"></section>
+
+    <!-- Gallery -->
+
+    <section id="gallery" class="gallery">
+      <h2 data-aos="fade-up">Gallery</h2>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/images/gallery1.png" />
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/gallery2.png" />
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/gallery3.png" />
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/gallery4.png" />
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Venue -->
+
+    <section id="venue" class="venue">
+      <h2 data-aos="fade-up">Venue</h2>
+
+      <p>Vaishnav Hotel, Sainaka, D-Mart Road, Latur - 413531</p>
+
+      <iframe
+        src="https://maps.google.com/maps?q=Vaishnav%20Hotel,%20Sainaka,%20D-Mart%20Road,%20Latur&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      >
+      </iframe>
+    </section>
+
+    <!-- Blessings -->
+
+    <section id="blessings" class="blessing">
+      <h2 data-aos="fade-up">With Love & Blessings</h2>
+
+      <p data-aos="fade-up">
+        Your gracious presence and warm blessings are the greatest gift to us.
+      </p>
+
+      <div class="quote" data-aos="fade-up" data-aos-delay="100">
+        “Two hearts, one beautiful journey, and countless memories ahead.”
+      </div>
+
+      <div class="family-blessings" data-aos="fade-up" data-aos-delay="200">
+        With blessings from both families
+      </div>
+    </section>
+
+    <!-- Final Invitation -->
+
+    <section class="thankyou">
+      <div class="overlay">
+        <h1 data-aos="fade-up" data-aos-duration="1500">See You At The Celebration ❤️</h1>
+        
+        <div class="gold-divider" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+          <span class="line"></span>
+          <span class="star">✦</span>
+          <span class="line"></span>
+        </div>
+
+        <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">3 July 2026 • Vaishnav Hotel • Latur</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+      <p class="footer-love">With Love</p>
+      <h3 class="footer-names">Omprakash & Rohini</h3>
+    </footer>
+
+    <!-- Libraries -->
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+
+    <script src="js/aosInit.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/gsapAnimations.js"></script>
+    <script src="js/invitationOpen.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+:root {
+    --primary: #bfa15f;          /* Champagne Gold */
+    --primary-hover: #a38545;    /* Darker Gold for hover state */
+    --secondary: #fdfbf7;        /* Ivory White */
+    --accent: #d4af37;           /* Metallic Gold */
+    --dark: #1e1b18;             /* Charcoal / Deep Bronze Dark */
+    --light: #ffffff;
+    --gray: #8c857b;             /* Soft Muted Gold-Gray */
+    --bg: #f9f6f0;               /* Warm Cream Background */
+    --rose-gold: #c58f88;        /* Rose Gold Accent */
+    
+    --gold-gradient: linear-gradient(135deg, #a38545 0%, #e2d1a6 50%, #8b6e2f 100%);
+    --gold-glow: 0 0 25px rgba(212, 175, 55, 0.35);
+    --glass-bg: rgba(253, 251, 247, 0.75);
+    --glass-border: rgba(191, 161, 95, 0.2);
+    
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-premium: 0 20px 45px rgba(30, 27, 24, 0.08);
+    --radius: 20px;
+    --radius-lg: 30px;
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --max-width: 1200px;
+}

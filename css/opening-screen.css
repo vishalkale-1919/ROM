@@ -1,0 +1,288 @@
+/* Cinematic Opening Screen Styles */
+
+.lock-scroll {
+    overflow: hidden !important;
+    height: 100vh !important;
+}
+
+.opening-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    overflow: hidden;
+    background: #0d0c0a; /* Luxurious deep black/gold base */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1500px; /* Essential for 3D door swing */
+}
+
+/* Background Soft Golden Light Glow */
+.opening-screen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(226, 209, 166, 0.15) 0%, rgba(13, 12, 10, 0) 70%);
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.opening-screen.doors-opening::before {
+    opacity: 1;
+}
+
+/* 3D Doors Container */
+.doors-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.door {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background: #fdfbf7;
+    transition: transform 2.2s cubic-bezier(0.25, 1, 0.3, 1);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+}
+
+.left-door {
+    transform-origin: left center;
+    border-right: 1px solid rgba(191, 161, 95, 0.25);
+}
+
+.right-door {
+    transform-origin: right center;
+    border-left: 1px solid rgba(191, 161, 95, 0.25);
+}
+
+/* Double Doors Moldings & Ornament styling */
+.door-panel {
+    position: absolute;
+    inset: 30px;
+    border: 1px dashed rgba(191, 161, 95, 0.3);
+    background: linear-gradient(145deg, #fdfbf7 0%, #f4eee1 100%);
+    box-shadow: inset 0 0 50px rgba(191, 161, 95, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.door-inner-border {
+    position: absolute;
+    inset: 15px;
+    border: 2px solid var(--primary);
+    opacity: 0.75;
+}
+
+/* Elegant Door Handles */
+.left-door::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 140px;
+    background: var(--gold-gradient);
+    border-radius: 4px 0 0 4px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.right-door::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 140px;
+    background: var(--gold-gradient);
+    border-radius: 0 4px 4px 0;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+/* Door Open Animation States (triggered via JS) */
+.opening-screen.active-open .left-door {
+    transform: rotateY(-110deg);
+}
+
+.opening-screen.active-open .right-door {
+    transform: rotateY(110deg);
+}
+
+/* Opening Content Overlay */
+.opening-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 600px;
+    padding: 40px;
+    background: rgba(253, 251, 247, 0.92);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(191, 161, 95, 0.35);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(30, 27, 24, 0.12);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.3, 1), transform 1s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.opening-screen.active-open .opening-content {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+
+/* Monogram Logo */
+.monogram-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 8px 22px;
+    border-radius: 50px;
+    display: inline-block;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+    background: #fdfbf7;
+    box-shadow: inset 0 0 10px rgba(191, 161, 95, 0.15);
+}
+
+/* Names and Typography */
+.opening-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4rem;
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--dark);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.opening-title .ampersand {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2.6rem;
+    color: var(--primary);
+    display: block;
+    margin: 8px 0;
+}
+
+.opening-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--gray);
+    margin-bottom: 45px;
+}
+
+/* Premium Button Styling */
+.btn-open-invitation {
+    position: relative;
+    background: var(--dark);
+    color: var(--secondary);
+    border: 1px solid var(--primary);
+    padding: 16px 45px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.btn-open-invitation span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-open-invitation::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold-gradient);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.btn-open-invitation:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(191, 161, 95, 0.35);
+    color: var(--dark);
+    border-color: transparent;
+}
+
+.btn-open-invitation:hover::before {
+    opacity: 1;
+}
+
+.btn-open-invitation:active {
+    transform: translateY(-1px);
+}
+
+/* Petals Overlay Canvas */
+.particle-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 6; /* Falls in front of doors */
+}
+
+#petal-canvas {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .door-panel {
+        inset: 15px;
+    }
+    .door-inner-border {
+        inset: 8px;
+    }
+    .opening-content {
+        padding: 30px 20px;
+        width: 85%;
+        border-radius: 18px;
+    }
+    .opening-title {
+        font-size: 2.4rem;
+    }
+    .opening-title .ampersand {
+        font-size: 2rem;
+    }
+    .opening-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 4px;
+        margin-bottom: 30px;
+    }
+    .btn-open-invitation {
+        padding: 14px 35px;
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+    }
+    .left-door::after, .right-door::after {
+        height: 100px;
+    }
+}

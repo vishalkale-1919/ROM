@@ -1,0 +1,53 @@
+.fade-up {
+  opacity: 0;
+
+  transform: translateY(60px);
+}
+
+.zoom-in {
+  opacity: 0;
+
+  transform: scale(0.8);
+}
+
+.slide-left {
+  opacity: 0;
+
+  transform: translateX(-80px);
+}
+
+.slide-right {
+  opacity: 0;
+
+  transform: translateX(80px);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hover-lift {
+  transition: 0.4s;
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px);
+}
+
+.rotate {
+  animation: rotateFlower 20s linear infinite;
+}
+
+@keyframes rotateFlower {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
